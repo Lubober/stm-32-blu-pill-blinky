@@ -1,0 +1,16 @@
+[package]
+name = "blinky"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+cortex-m = "0.7.10"
+cortex-m-rt = "0.7.7"
+panic-halt = "1.0.0"
+stm32f1xx-hal = { version = "0.11.0", features = ["stm32f103"] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
